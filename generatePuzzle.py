@@ -85,6 +85,20 @@ def loadDictionary():
     result = [x for x in allwords if x not in badwords]
     return result
 
+import matplotlib.pyplot as plt
+
+
+def drawHexagon(page):
+    # define the vertices of the hexagon
+    vertices = [[0, 0], [1, 0], [1.5, 0.866], [1, 1.732], [0, 1.732], [-0.5, 0.866]]
+
+    # plot the hexagon
+    plt.plot([vertices[i][0] for i in range(6)], [vertices[i][1] for i in range(6)], 'b-')
+
+    # show the plot
+    plt.show()
+    return
+
 def checkValidGame(game):
     # initialize plural detection engine
     p = inflect.engine()
